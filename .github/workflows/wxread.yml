@@ -1,3 +1,20 @@
+name: wxread # workflow的名称
+
 on:
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 10 * * *' # 每天上午10点触发
+
+jobs:
+  wxread:
+    runs-on: ubuntu-latest # 在最新的Ubuntu环境中运行
+
+    # 定义任务执行前需要做的事情，这里是检出代码
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run wxread
+        run: |
+          echo "Running wxread at 10:00 AM"
+          # 在这里可以添加更多实际执行wxread任务的命令，例如假设wxread是一个Python脚本
+          # python3 your_wxread_script.py
