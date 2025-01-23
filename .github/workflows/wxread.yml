@@ -2,7 +2,7 @@ name: wxread # workflow的名称
 
 on:
   schedule:
-    - cron: '0 10 * * *' # 每天上午10点触发
+    - cron: '40 17 * * *' # 每天上午10点触发
 
 jobs:
   wxread:
